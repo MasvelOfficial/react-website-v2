@@ -1,0 +1,45 @@
+@import '../../variables.scss';
+
+.nav {
+  position: sticky;
+  top: 0;
+  width: var(--nav-size);
+  height: 100vh;
+  &.flex-wrapper {
+    flex-direction: column;
+    justify-content: space-between;
+    & > .item {
+      font-size: 1.75em;
+      &:nth-of-type(1),
+      &:nth-of-type(3) {
+        width: var(--nav-size);
+        height: var(--nav-size);
+        &.flex-wrapper {
+          justify-content: center;
+          align-items: center;
+        }
+      }
+      &:nth-of-type(1) {
+        background-color: $primary-color;
+        color: $black-color;
+      }
+      &:nth-of-type(2) {
+        &.flex-wrapper {
+          flex-direction: column;
+          align-items: center;
+          & > .item {
+            &:not(:last-of-type) {
+              margin-bottom: 30px;
+            }
+          }
+        }
+      }
+    }
+  }
+  a {
+    color: $grey-color;
+    &.active {
+      color: $primary-color;
+    }
+  }
+}
