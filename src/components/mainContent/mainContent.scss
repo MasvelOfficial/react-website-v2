@@ -1,0 +1,15 @@
+@import '../../variables.scss';
+
+.main-content {
+  position: relative;
+  width: calc(60% - var(--nav-size) / 2);
+  padding: 50px;
+  & > .icon-wrapper {
+    position: absolute;
+    right: 100px;
+    bottom: 0;
+    font-size: 25em;
+    color: rgba($white-color, .025);
+    pointer-events: none;
+  }
+}

@@ -38,6 +38,10 @@
   }
   a {
     color: $grey-color;
+    transition: color .25s ease;
+    &:hover {
+      color: rgba($white-color, .85);
+    }
     &.active {
       color: $primary-color;
     }

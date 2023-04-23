@@ -1,5 +1,5 @@
 import './nav.scss'
-import { SlMenu, SlUser, SlPhone, SlBriefcase, SlEyeglass, SlCloudDownload } from 'react-icons/sl'
+import { SlMenu, SlHome, SlUser, SlPhone, SlBriefcase, SlEyeglass, SlCloudDownload } from 'react-icons/sl'
 import { NavLink } from 'react-router-dom'
 
 const Nav = () => {
@@ -9,23 +9,36 @@ const Nav = () => {
         <SlMenu />
       </div>
       <div className="item flex-wrapper icons">
-        <div className="item icon-wrapper active">
+        <div className="item icon-wrapper">
+          <NavLink to="/">
+            <SlHome />
+          </NavLink>
+        </div>
+        <div className="item icon-wrapper">
           <NavLink to="/about">
             <SlUser />
           </NavLink>
         </div>
         <div className="item icon-wrapper">
-          <SlPhone />
+          <NavLink to="/work">
+            <SlBriefcase />
+          </NavLink>
         </div>
         <div className="item icon-wrapper">
-          <SlBriefcase />
+          <NavLink to="/portfolio">
+            <SlEyeglass />
+          </NavLink>
         </div>
         <div className="item icon-wrapper">
-          <SlEyeglass />
+          <a href="/">
+            <SlPhone />
+          </a>
         </div>
       </div>
       <div className="item icon-wrapper flex-wrapper">
-        <SlCloudDownload />
+        <a href="/">
+          <SlCloudDownload />
+        </a>
       </div>
     </nav>
   )

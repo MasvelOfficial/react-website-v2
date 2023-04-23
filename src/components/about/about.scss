@@ -1,0 +1,12 @@
+@import '../../variables.scss';
+
+.skills {
+  &.grid-wrapper {
+    grid-template-columns: 1fr 1fr;
+    gap: 30px;
+  }
+  .icon-wrapper {
+    color: $primary-color;
+    font-size: 1.75em;
+  }
+}
